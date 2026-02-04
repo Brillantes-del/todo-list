@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(back\ todo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+body .root{
+    padding: 15px;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title img{
+    width: 40px;
+}
+
+body .root .input-container{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+body .root .input-container #input-text{
+    width: 415px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+body .root .input-container .add-todo{
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    transition: 0.5s ease;
+}
+
+body .root .input-container .add-todo:hover{
+    color:  rgba(117,144,179,1)
+}
+
+body .root .todo-container{
+    height: 400px;
+    padding: 5px;
+}
+
+.scroll{
+    overflow-y: scroll;
+}
+
+#todo-list{
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#todo-list .mark-done{
+    position: absolute;
+    right: 25px;
+}
+
+#todo-list .delete{
+    position: absolute;
+    right: 5px;
+    transition: 0.5s ease;
+}
+
+#todo-list .delete:hover{
+    color: red;
+}
+
+.done::before{
+    content: "";
+    width: 80%;
+    height: 5px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(202,248,255,1) 0%, rgba(186,204,227,1) 51.2%, rgba(117,144,179,1) 100.1% );
+    position: absolute;
+    left: 10px;
+    bottom: 50%;
+}
+
+@media(max-width: 700px){
+    body .root .input-container #input-text{
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+#todo-list{
+    padding: 10px;
+    border-radius: 10px;
+    width: 285px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+}
