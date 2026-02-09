@@ -46,6 +46,7 @@ button.onclick = () => {
     savedata()
    
    }
+        inputText.value = '';
 
    savedata()
     } else{
@@ -63,3 +64,4 @@ function getdata(){
 }
 
 getdata();
+
