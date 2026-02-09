@@ -39,29 +39,18 @@ button.onclick = () => {
   
    if(getLi > 8){
     todoContainer.classList.add("scroll")
-    savedata()
     
    }  else if(getLi <= 8){
     todoContainer.classList.remove("scroll") 
-    savedata()
    
    }
         inputText.value = '';
 
-   savedata()
     } else{
         console.log('error')
     }
-    savedata()
-}
-
-function savedata(){
-    localStorage.setItem("listdata", todoContainer.innerHTML)
-}
-
-function getdata(){
-    todoContainer.innerHTML = localStorage.getItem("listdata")
 }
 
 getdata();
+
 
